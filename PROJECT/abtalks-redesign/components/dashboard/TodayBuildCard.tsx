@@ -7,14 +7,22 @@ interface TodayBuildCardProps {
   challenge: Challenge;
 }
 
-const PREVIEW_REQUIREMENTS = [
-  "GitHub username input",
-  "Profile information",
-  "Repository statistics",
-  "Responsive interface",
-];
+function getPreviewRequirements(challenge: Challenge): string[] {
+  const responsive =
+    challenge.requirements.find((item) =>
+      item.toLowerCase().includes("responsive"),
+    ) ?? "Responsive interface";
+
+  return [
+    challenge.requirements[0] ?? "GitHub username input",
+    challenge.requirements[1] ?? "Profile information",
+    "Repository statistics",
+    responsive,
+  ];
+}
 
 export function TodayBuildCard({ challenge }: TodayBuildCardProps) {
+  const previewRequirements = getPreviewRequirements(challenge);
   return (
     <section
       id="today-build"
@@ -43,12 +51,11 @@ export function TodayBuildCard({ challenge }: TodayBuildCardProps) {
       </div>
 
       <p className="mt-4 text-sm leading-relaxed text-text-secondary">
-        Build a web app that takes a GitHub username and displays useful profile
-        and repository statistics.
+        {challenge.description}
       </p>
 
       <ul className="mt-4 space-y-2" aria-label="Requirements preview">
-        {PREVIEW_REQUIREMENTS.map((item) => (
+        {previewRequirements.map((item) => (
           <li
             key={item}
             className="flex items-center gap-2 text-sm text-text-secondary"

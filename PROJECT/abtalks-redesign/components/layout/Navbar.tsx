@@ -15,6 +15,8 @@ export function Navbar({ scenario }: NavbarProps) {
       : "default",
   );
 
+  const query = scenario ? `?scenario=${scenario}` : "";
+
   const initials = student.name
     ? student.name
         .split(" ")
@@ -28,14 +30,14 @@ export function Navbar({ scenario }: NavbarProps) {
     <header className="sticky top-0 z-40 border-b border-border-subtle bg-bg-base/95 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-[430px] items-center justify-between px-5">
         <Link
-          href="/dashboard"
+          href={`/dashboard${query}`}
           className="text-base font-semibold tracking-tight text-text-primary"
         >
           ABTalks
         </Link>
 
         <Link
-          href="/dashboard"
+          href={`/dashboard${query}#profile`}
           className="flex h-9 w-9 items-center justify-center rounded-full bg-bg-elevated border border-border text-text-secondary transition-colors hover:bg-bg-hover hover:text-text-primary"
           aria-label="Profile"
         >
