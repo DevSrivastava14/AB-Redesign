@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #0d0d0d;
+  --bg-surface: #1a1a1a;
+  --bg-elevated: #242424;
+  --bg-hover: #2a2a2a;
+
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+
+  --accent: #f5a623;
+  --accent-hover: #e09515;
+  --accent-muted: rgba(245, 166, 35, 0.15);
+
+  --success: #22c55e;
+  --success-muted: rgba(34, 197, 94, 0.15);
+
+  --warning: #f59e0b;
+  --warning-muted: rgba(245, 158, 11, 0.15);
+
+  --error: #ef4444;
+  --error-muted: rgba(239, 68, 68, 0.15);
+
+  --border: #2e2e2e;
+  --border-subtle: #1f1f1f;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --spacing-page: 20px;
+}
+
+@theme inline {
+  --color-bg-base: var(--bg-base);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-hover: var(--bg-hover);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
+
+  --color-success: var(--success);
+  --color-success-muted: var(--success-muted);
+
+  --color-warning: var(--warning);
+  --color-warning-muted: var(--warning-muted);
+
+  --color-error: var(--error);
+  --color-error-muted: var(--error-muted);
+
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes progress-fill {
+  from {
+    width: 0%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes check-pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-progress-fill {
+  animation: progress-fill 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out forwards;
+}
+
+.animate-check-pop {
+  animation: check-pop 0.35s ease-out forwards;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

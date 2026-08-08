@@ -1,0 +1,34 @@
+{
+  "where-to-start": {
+    "label": "I don't know where to start",
+    "hints": [
+      "Start by identifying the GitHub API endpoint you'll need. The public user endpoint returns profile data — once you know what comes back, decide which pieces belong in your interface.",
+      "Sketch a simple layout on paper: an input at the top, profile info below, then repo stats. Build the input and fetch logic first — everything else follows from the API response.",
+      "Try fetching data for a known username like 'octocat' in your browser or a quick script. Seeing real JSON makes the rest of the build much clearer."
+    ]
+  },
+  "stuck-planning": {
+    "label": "I'm stuck planning",
+    "hints": [
+      "Break the app into three screens in your head: input → loading → results. You only need to build one screen at a time.",
+      "List the five requirements as checkboxes. Pick the easiest one — usually the username input — and ship that before touching anything else.",
+      "Don't plan for edge cases yet. Get the happy path working with one username, then handle empty states and errors."
+    ]
+  },
+  "debugging": {
+    "label": "I'm debugging",
+    "hints": [
+      "Open your browser's Network tab and check if the API request is going out. A 404 usually means the username is wrong; a CORS error means you need a server-side fetch or proxy.",
+      "Log the full API response to the console before trying to render it. Most bugs come from assuming field names that don't exist in the actual JSON.",
+      "If data shows in the console but not on screen, the issue is in your render logic — check that you're accessing nested properties correctly."
+    ]
+  },
+  "give-hint": {
+    "label": "Give me a hint",
+    "hints": [
+      "The GitHub REST API endpoint for a user profile is GET /users/{username}. No auth needed for public profiles.",
+      "Repository languages live inside each repo object. You'll need to aggregate them across repos to find the most-used ones.",
+      "For a responsive layout, stack profile and stats vertically on mobile. A simple CSS grid or flex column works well at 390px width."
+    ]
+  }
+}

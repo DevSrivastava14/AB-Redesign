@@ -1,0 +1,14 @@
+{
+  "day": 12,
+  "title": "GitHub Profile Analyzer",
+  "difficulty": "Intermediate",
+  "estimatedTime": "60 min",
+  "description": "Build a web application that accepts a GitHub username and displays profile and repository statistics.",
+  "requirements": [
+    "GitHub username input",
+    "Profile information",
+    "Repository count",
+    "Most-used languages",
+    "Responsive interface"
+  ]
+}

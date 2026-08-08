@@ -1,0 +1,13 @@
+{
+  "name": "Arjun Sharma",
+  "college": "VIT",
+  "track": "Web Development",
+  "currentDay": 12,
+  "streak": 11,
+  "completedDays": 11,
+  "completionPercentage": 18.3,
+  "profileComplete": true,
+  "profileCompletionPercentage": 60,
+  "missedDays": [],
+  "achievements": ["7 Day Streak", "First Project Shipped", "Public Builder"]
+}

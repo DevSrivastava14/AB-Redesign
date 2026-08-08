@@ -1,0 +1,22 @@
+[
+  {
+    "id": "web-development",
+    "name": "Web Development",
+    "description": "Ship responsive web apps with HTML, CSS, JavaScript, and modern frameworks."
+  },
+  {
+    "id": "ai-ml",
+    "name": "AI & ML",
+    "description": "Build practical AI projects — from data pipelines to deployed models."
+  },
+  {
+    "id": "app-development",
+    "name": "App Development",
+    "description": "Create mobile and cross-platform apps students can demo on their phones."
+  },
+  {
+    "id": "data",
+    "name": "Data",
+    "description": "Work with datasets, visualizations, and analytics tools that tell a story."
+  }
+]
